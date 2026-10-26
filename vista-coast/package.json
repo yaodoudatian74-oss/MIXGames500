@@ -1,0 +1,22 @@
+{
+  "name": "vista-coast",
+  "version": "1.0.0",
+  "description": "VISTA COAST - browser 3D open-world crime action game (three.js, TypeScript, PWA)",
+  "main": "dist/index.html",
+  "scripts": {
+    "build": "node tools/build.mjs && cp assets/icon-*.png dist/",
+    "typecheck": "tsc --noEmit -p .",
+    "test": "esbuild tests/run_tests.ts --bundle --platform=node --outfile=.tmp/tests.js --log-level=error && node .tmp/tests.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "esbuild": "^0.28.2",
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.170.0",
+    "typescript": "5.6"
+  }
+}

@@ -1,0 +1,5 @@
+node_modules/
+.tmp/
+android/build/
+android/assets/
+android/release.keystore
