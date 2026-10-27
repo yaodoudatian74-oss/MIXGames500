@@ -1,0 +1,76 @@
+<title>VISTA COAST APK</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: one centered column — logo, the download button, then the four install steps. Single dark look matching the game's sunset title screen. */
+:root {
+  color-scheme: dark;
+  --bg: #07090c;
+  --panel: #12161c;
+  --line: #222a33;
+  --fg: #f2f0ec;
+  --muted: #a7adb5;
+  --sun: #f29f4c;
+  --rose: #e2507a;
+  --gold: #f2b705;
+  --ink: #15110a;
+  --display: "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  --body: "Hiragino Sans", "Noto Sans JP", "Yu Gothic UI", system-ui, sans-serif;
+  --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+html, body { background: var(--bg); color: var(--fg); }
+body {
+  font-family: var(--body); font-size: 15px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 28px 40px;
+  background: radial-gradient(120% 60% at 50% 0%, rgba(242,159,76,.16), transparent 60%), var(--bg);
+}
+main { max-width: 560px; margin: 0 auto; display: grid; gap: 22px; }
+.logo { font: 900 italic clamp(40px, 12vw, 64px)/0.95 var(--display); letter-spacing: -1px; text-align: center; margin: 6px 0 0;
+  background: linear-gradient(180deg, #ffe08a 0%, var(--sun) 50%, var(--rose) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; text-wrap: balance; }
+.tag { text-align: center; color: var(--muted); margin: -10px 0 0; font-size: 13px; letter-spacing: .12em; }
+.dl { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-height: 76px; padding: 14px 18px; border-radius: 16px;
+  background: var(--gold); color: var(--ink); text-decoration: none; font: 800 21px/1.2 var(--body); box-shadow: 0 10px 30px rgba(242,183,5,.25); }
+.dl small { font: 600 13px/1.3 var(--body); opacity: .75; }
+.dl:focus-visible { outline: 3px solid var(--fg); outline-offset: 3px; }
+.dl:active { transform: translateY(1px); }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; }
+h2 { margin: 0 0 10px; font-size: 16px; color: var(--sun); text-wrap: balance; }
+ol { margin: 0; padding-left: 1.4em; display: grid; gap: 8px; }
+li::marker { color: var(--gold); font-weight: 800; }
+.meta { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; font-size: 13px; color: var(--muted); }
+.meta dt { color: var(--fg); }
+.meta dd { margin: 0; min-width: 0; overflow-wrap: anywhere; font-family: var(--mono); font-size: 12px; }
+.note { font-size: 13px; color: var(--muted); }
+.note a { color: var(--sun); }
+@media (prefers-reduced-motion: reduce) { .dl:active { transform: none; } }
+</style>
+<main>
+  <h1 class="logo">VISTA COAST</h1>
+  <p class="tag">Android アプリ版</p>
+
+  <a class="dl" id="download" href="https://github.com/yaodoudatian74-oss/MIXGames500/raw/main/vista-coast/release/VISTA-COAST.apk" target="_blank" rel="noopener">
+    APKをダウンロード
+    <small>v1.0 ・ 0.37 MB ・ Android 7.0 以上</small>
+  </a>
+
+  <section class="card">
+    <h2>インストールのしかた</h2>
+    <ol>
+      <li>上の「APKをダウンロード」をタップします。</li>
+      <li>ダウンロード完了の通知（またはブラウザの「開く」）をタップします。</li>
+      <li>「不明なアプリのインストール」の確認が出たら、このブラウザを「許可」にして戻ります。</li>
+      <li>Android のインストール画面で「インストール」を押し、完了したら「開く」で起動します。</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2>対応機種</h2>
+    <p class="note" style="margin:0 0 10px">Android スマホ・タブレット専用です（横画面・WebGL2 対応端末）。iPhone / iPad では APK を入れられないため、<a href="https://claude.ai/artifact/Hap8gmSDuHKuDiP2SJL7Ln" target="_blank" rel="noopener">Web版</a>をホーム画面に追加して遊んでください。インストール画面は Android が表示するもので、ページから自動でインストールすることはできません。</p>
+    <dl class="meta">
+      <dt>パッケージ</dt><dd>com.vistacoast.game</dd>
+      <dt>署名 SHA-256</dt><dd>0c215cad7afb914d9ba71fc271fe0d8ec6c257ac66c434d99ef2746eae6f2265</dd>
+      <dt>画面</dt><dd>横向き・全画面（戻るボタン＝ポーズ）</dd>
+    </dl>
+  </section>
+</main>
