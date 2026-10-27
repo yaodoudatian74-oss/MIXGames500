@@ -27,9 +27,9 @@ export interface QualitySettings {
 
 export const TIERS: Record<QualityTier, Omit<QualitySettings, 'fpsLimit'>> = {
   low: { tier: 'low', pixelRatio: 0.75, maxDpr: 1.25, shadowMap: 1024, shadowExtent: 80, msaa: 0, fxaa: true, bloom: true, ao: false, dof: false, motionBlur: false, viewDistance: 750, treeDistance: 320, grass: false, traffic: 18, peds: 22, parked: 30, textureSize: 256, terrainDetail: 32 },
-  medium: { tier: 'medium', pixelRatio: 1, maxDpr: 1.5, shadowMap: 2048, shadowExtent: 110, msaa: 0, fxaa: true, bloom: true, ao: false, dof: false, motionBlur: true, viewDistance: 1100, treeDistance: 520, grass: true, traffic: 30, peds: 38, parked: 50, textureSize: 512, terrainDetail: 48 },
-  high: { tier: 'high', pixelRatio: 1, maxDpr: 2, shadowMap: 4096, shadowExtent: 140, msaa: 4, fxaa: false, bloom: true, ao: true, dof: false, motionBlur: true, viewDistance: 1600, treeDistance: 800, grass: true, traffic: 42, peds: 55, parked: 70, textureSize: 1024, terrainDetail: 64 },
-  ultra: { tier: 'ultra', pixelRatio: 1, maxDpr: 2.5, shadowMap: 4096, shadowExtent: 180, msaa: 4, fxaa: false, bloom: true, ao: true, dof: true, motionBlur: true, viewDistance: 2200, treeDistance: 1100, grass: true, traffic: 55, peds: 70, parked: 90, textureSize: 1024, terrainDetail: 64 },
+  medium: { tier: 'medium', pixelRatio: 1, maxDpr: 1.5, shadowMap: 2048, shadowExtent: 130, msaa: 0, fxaa: true, bloom: true, ao: true, dof: false, motionBlur: true, viewDistance: 1300, treeDistance: 620, grass: true, traffic: 36, peds: 44, parked: 60, textureSize: 1024, terrainDetail: 56 },
+  high: { tier: 'high', pixelRatio: 1, maxDpr: 2, shadowMap: 4096, shadowExtent: 170, msaa: 4, fxaa: false, bloom: true, ao: true, dof: false, motionBlur: true, viewDistance: 1900, treeDistance: 950, grass: true, traffic: 48, peds: 60, parked: 80, textureSize: 1024, terrainDetail: 72 },
+  ultra: { tier: 'ultra', pixelRatio: 1, maxDpr: 2.5, shadowMap: 4096, shadowExtent: 220, msaa: 4, fxaa: false, bloom: true, ao: true, dof: true, motionBlur: true, viewDistance: 2600, treeDistance: 1300, grass: true, traffic: 60, peds: 76, parked: 100, textureSize: 2048, terrainDetail: 80 },
 };
 
 export function isMobile(): boolean {
@@ -39,7 +39,7 @@ export function isMobile(): boolean {
 }
 
 export function defaultTier(): QualityTier {
-  return isMobile() ? 'medium' : 'high';
+  return 'high';
 }
 
 export function makeQuality(tier: QualityTier, fpsLimit = 0): QualitySettings {

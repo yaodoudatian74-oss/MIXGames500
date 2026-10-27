@@ -109,7 +109,7 @@ export class VehicleManager {
   ) {
     this.wheels = new WheelPool(900);
     this.group.add(this.wheels.tire, this.wheels.rim);
-    this.glassMat = new THREE.MeshPhysicalMaterial({ color: 0x0e151c, metalness: 0.2, roughness: 0.04, transparent: true, opacity: 0.62, clearcoat: 1, clearcoatRoughness: 0.02, envMapIntensity: 1.4 });
+    this.glassMat = new THREE.MeshPhysicalMaterial({ color: 0x0a1016, metalness: 0.3, roughness: 0.02, transparent: true, opacity: 0.48, clearcoat: 1, clearcoatRoughness: 0.01, envMapIntensity: 2.0, transmission: 0.1 });
     this.shared = makeSharedVehicleParts(lightPool);
     for (const p of graph.pieces) {
       if (p.kind !== 'lane' || p.length < 20) continue;

@@ -143,12 +143,12 @@ export class PostFX {
     this.composer.addPass(new ShaderPass(SanitizeShader));
     if (q.ao) {
       this.ao = new GTAOPass(scene, camera, size.x, size.y);
-      this.ao.blendIntensity = 0.75;
-      this.ao.updateGtaoMaterial({ radius: 0.6, distanceExponent: 1.4, thickness: 1.2, scale: 1.0, samples: 12 });
+      this.ao.blendIntensity = 1.0;
+      this.ao.updateGtaoMaterial({ radius: 0.8, distanceExponent: 1.6, thickness: 1.5, scale: 1.0, samples: 16 });
       this.composer.addPass(this.ao);
     }
     if (q.bloom) {
-      this.bloom = new UnrealBloomPass(new THREE.Vector2(size.x / 2, size.y / 2), 0.3, 0.4, 1.0);
+      this.bloom = new UnrealBloomPass(new THREE.Vector2(size.x / 2, size.y / 2), 0.4, 0.5, 0.92);
       this.composer.addPass(this.bloom);
     }
     this.output = new OutputPass();

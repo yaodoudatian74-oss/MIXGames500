@@ -398,7 +398,7 @@ function buildBike(spec: VehicleSpec): VehicleGeometry {
 
 /** Body material: per-vertex material ids select paint / trim / chrome / lights. */
 export function makeBodyMaterial(): THREE.MeshPhysicalMaterial {
-  const m = new THREE.MeshPhysicalMaterial({ vertexColors: true, roughness: 0.35, metalness: 0.55, clearcoat: 1, clearcoatRoughness: 0.06 });
+  const m = new THREE.MeshPhysicalMaterial({ vertexColors: true, roughness: 0.3, metalness: 0.65, clearcoat: 1, clearcoatRoughness: 0.04, envMapIntensity: 1.4 });
   m.userData['uniforms'] = null;
   return m;
 }

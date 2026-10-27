@@ -192,6 +192,10 @@ float facadeWin; float facadeLit; float facadeFrame; float facadeGlass; float fa
     float v = vLocal.y;
     float isRoof = step(0.5, vLocal.z);
     float g = texture2D(uGrime, vec2(u, v) / 9.0).r;
+    float gFine = texture2D(uGrime, vec2(u, v) / 2.3).r;
+    // ground floor is grimier (water staining, dirt)
+    float groundGrime = (1.0 - smoothstep(0.0, 3.0, v)) * 0.4;
+    g = clamp(g - gFine * 0.15 - groundGrime, 0.0, 1.0);
     diffuseColor.rgb *= mix(1.0, g, 0.7);
     facadeWin = 0.0; facadeLit = 0.0; facadeFrame = 0.0; facadeGlass = 0.0; facadeBlind = 0.0; facadeMetal = 0.0;
     if (isRoof < 0.5) {
